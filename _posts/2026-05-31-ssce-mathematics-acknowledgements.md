@@ -23,7 +23,7 @@ Contribution types:
 ### General Contributions 
 
 #### Book-Wide Contributions 
-- **Joshua Olunlade** — Outlining
+- **Joshua Olunlade** — Team Lead (Jan 2026 - Present); Preliminary Outlining
 
 #### Book-Wide Support Funding
 *No entries yet.*

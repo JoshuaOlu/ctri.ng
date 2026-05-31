@@ -23,7 +23,7 @@ Contribution types:
 ### General Contributions 
 
 #### Book-Wide Contributions 
-*No entries yet.*
+- **Mofiyinfoluwa Olowolafe** — Team Lead (Jan 2026 - Present); Preliminary Outlining
 
 #### Book-Wide Support Funding
 *No entries yet.*

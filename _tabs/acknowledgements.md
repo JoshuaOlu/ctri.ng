@@ -20,9 +20,10 @@ Contributions are acknowledged in two ways:
 
 *No entries yet.*
 
-### Project Coordination & Administration
+### Program Coordination & Administration
+- **Cornelius Aboderin** — Program Coordinator (Jan 2026 - Present)
+- **Janet Fasoro** — Program Administrator (Apr 2026 - Present)
 
-*No entries yet.*
 
 ### Other Project-Wide Contributions
 
@@ -34,12 +35,12 @@ Contributions are acknowledged in two ways:
 
 For chapter-level acknowledgements, visit the page for each subject:
 
-| Subject | Acknowledgements Page |
-|---------|----------------------|
-| Mathematics | [Mathematics Acknowledgements](/ssce-mathematics-acknowledgements/) |
-| Physics | [Physics Acknowledgements](/ssce-physics-acknowledgements/) |
-| Chemistry | [Chemistry Acknowledgements](/ssce-chemistry-acknowledgements/) |
-| Biology | [Biology Acknowledgements](/ssce-biology-acknowledgements/) |
+| Subject              | Acknowledgements Page                                                  |
+| -------------------- | ---------------------------------------------------------------------- |
+| Mathematics          | [Mathematics Acknowledgements](/ssce-mathematics-acknowledgements/)    |
+| Physics              | [Physics Acknowledgements](/ssce-physics-acknowledgements/)            |
+| Chemistry            | [Chemistry Acknowledgements](/ssce-chemistry-acknowledgements/)        |
+| Biology              | [Biology Acknowledgements](/ssce-biology-acknowledgements/)            |
 | Agricultural Science | [Agricultural Science Acknowledgements](/ssce-agric-acknowledgements/) |
 
 ---

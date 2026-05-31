@@ -23,7 +23,8 @@ Contribution types:
 ### General Contributions 
 
 #### Book-Wide Contributions 
-*No entries yet.*
+- **Oreoluwa Otitoola** — Team Lead (Jan 2026 - Present)
+- **Christianah Omofoye** — Team Lead (Jan 2025 - Dec 2025); Preliminary Outlining
 
 #### Book-Wide Support Funding
 *No entries yet.*
