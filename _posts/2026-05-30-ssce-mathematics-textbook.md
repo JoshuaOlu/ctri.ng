@@ -109,7 +109,7 @@ As chapters are completed, they will be published here as downloadable PDFs.
 | 2.2     | Equations & Inequalities                       | Not Started | —       | —        |
 | 2.3     | Graphs of Functions                            | Not Started | —       | —        |
 | 2.4     | Functions, Relations & Matrices                | Not Started | —       | —        |
-| 3.1     | Lengths, Perimeters & Areas of Plane Shapes    | Not Started | —       | —        |
+| 3.1     | Lengths, Perimeters & Areas of Plane Shapes    | Started     | —       | —        |
 | 3.2     | Surface Areas & Volumes of Solids              | Not Started | —       | —        |
 | 3.3     | Longitudes, Latitudes & Earth Geometry         | Not Started | —       | —        |
 | 4.1     | Angles, Lines & Polygons                       | Not Started | —       | —        |
