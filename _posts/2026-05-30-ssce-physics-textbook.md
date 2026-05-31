@@ -145,9 +145,7 @@ If you would like to contribute or suggest improvements:
 
 ## Relationship with Care for Knowledge
 
-CTRI is an initiative of Care for Knowledge, focused on improving access to educational resources.
-
-👉 [https://careforknowledge.org](https://careforknowledge.org)
+CTRI is an initiative of **[Care For Knowledge](https://careforknowledge.org)**, a Nigeria-based non-profit organisation focused on improving access to quality educational resources.
 
 ---
 

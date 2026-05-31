@@ -11,9 +11,7 @@ The Collaborative Tutorial Resources Initiative (CTRI) is an educational initiat
 
 CTRI is designed to improve how students access and engage with learning materials by making textbooks more understandable, progressive, and learner-centered.
 
-CTRI is an initiative of Care for Knowledge.
-
-👉 https://careforknowledge.org
+CTRI is an initiative of **[Care For Knowledge](https://careforknowledge.org)**, a Nigeria-based non-profit organisation focused on improving access to quality educational resources.
 
 ---
 
@@ -82,9 +80,7 @@ If you would like to contribute:
 
 ## Relationship with Care for Knowledge
 
-CTRI is an initiative of Care for Knowledge, an organization focused on improving access to education and knowledge resources.
-
-👉 https://careforknowledge.org
+CTRI is an initiative of **[Care For Knowledge](https://careforknowledge.org)**, a Nigeria-based non-profit organisation focused on improving access to quality educational resources.
 
 ---
 

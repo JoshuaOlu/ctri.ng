@@ -124,6 +124,4 @@ We are actively looking for:
 
 ## Relationship with Care for Knowledge
 
-CTRI is an initiative of Care for Knowledge, a nonprofit focused on improving access to educational resources.
-
-👉 https://careforknowledge.org
+CTRI is an initiative of **[Care For Knowledge](https://careforknowledge.org)**, a Nigeria-based non-profit organisation focused on improving access to quality educational resources.
