@@ -165,4 +165,10 @@ Updates will include:
 - Revisions
 - Contributor contributions
 
+---
+
+## Acknowledgements
+
+For a full list of contributors to this textbook, visit the [Mathematics Acknowledgements](/ssce-mathematics-acknowledgements/) page.
+
 This is an evolving textbook built openly and collaboratively.
