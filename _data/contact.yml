@@ -1,18 +1,28 @@
 #  The contact options.
 
-- type: github
-  icon: "fab fa-github"
-
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+# Contact options
 
 - type: email
   icon: "fas fa-envelope"
-  noblank: true # open link in current tab
-
-- type: rss
-  icon: "fas fa-rss"
   noblank: true
+
+- type: website
+  icon: "fas fa-globe"
+  url: "https://careforknowledge.org"
+  noblank: true
+
+- type: youtube
+  icon: "fab fa-youtube"
+  url: "https://www.youtube.com/@care4knowledge"
+  noblank: true
+
+- type: linkedin
+  icon: 'fab fa-linkedin'
+  url: 'https://www.linkedin.com/company/cfk-fellowship'
+
+# - type: rss
+#   icon: "fas fa-rss"
+#   noblank: true
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
@@ -38,3 +48,9 @@
 # - type: threads
 #   icon: 'fa-brands fa-threads'
 #   url: ''                   # Fill with your Threads profile link
+
+# - type: github
+#   icon: "fab fa-github"
+
+# - type: twitter
+#   icon: "fa-brands fa-x-twitter"
