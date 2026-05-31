@@ -1,6 +1,6 @@
 ---
 title: "CTRI Launches SSCE Textbook Development Initiative"
-date: 2026-05-31 12:00:00 +0100
+date: 2026-05-30 12:00:00 +0100
 categories: [ctri, announcement]
 tags: [ctri, ssce, textbooks, nigeria, education, cfk]
 pin: true

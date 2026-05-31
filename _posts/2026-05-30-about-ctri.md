@@ -1,6 +1,6 @@
 ---
 title: "What is CTRI? Collaborative Tutorial Resources Initiative Explained"
-date: 2026-05-31 13:00:00 +0100
+date: 2026-05-30 13:00:00 +0100
 categories: [ctri, about]
 tags: [ctri, ssce, education, nigeria, textbooks, cfk]
 ---
