@@ -23,13 +23,13 @@ This page is your starting point. Use the links below to navigate to the subject
 
 ## Subjects
 
-| Subject              | Themes | Chapters | Hub Page                                                      |
-| -------------------- | ------ | -------- | ------------------------------------------------------------- |
-| Mathematics          | 6      | 26       | [Go to Mathematics Hub](/posts/ssce-mathematics-textbook/)    |
-| Physics              | 6      | 19       | [Go to Physics Hub](/posts/ssce-physics-textbook/)            |
-| Chemistry            | 12     | 28       | [Go to Chemistry Hub](/posts/ssce-chemistry-textbook/)        |
-| Biology              | 9      | 30       | [Go to Biology Hub](/posts/ssce-biology-textbook/)            |
-| Agricultural Science | 7      | 30       | [Go to Agricultural Science Hub](/posts/ssce-agric-textbook/) |
+| Subject              | Hub Page                                                      |
+| -------------------- | ------------------------------------------------------------- |
+| Mathematics          | [Go to Mathematics Hub](/posts/ssce-mathematics-textbook/)    |
+| Physics              | [Go to Physics Hub](/posts/ssce-physics-textbook/)            |
+| Chemistry            | [Go to Chemistry Hub](/posts/ssce-chemistry-textbook/)        |
+| Biology              | [Go to Biology Hub](/posts/ssce-biology-textbook/)            |
+| Agricultural Science | [Go to Agricultural Science Hub](/posts/ssce-agric-textbook/) |
 
 Each subject hub contains the full chapter roadmap, current development status, and download links as chapters are released.
 
@@ -64,6 +64,4 @@ This textbook series is built openly and collaboratively. We welcome:
 
 ## About CTRI
 
-CTRI is an initiative of **Care for Knowledge**, a Nigeria-based organisation focused on improving access to quality educational resources.
-
-👉 [https://careforknowledge.org](https://careforknowledge.org)
+CTRI is an initiative of **[Care For Knowledge](https://careforknowledge.org)**, a Nigeria-based non-profit organisation focused on improving access to quality educational resources.
