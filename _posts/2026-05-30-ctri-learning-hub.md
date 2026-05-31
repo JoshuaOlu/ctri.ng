@@ -1,6 +1,6 @@
 ---
 title: "CTRI Learning Hub — Free SSCE Textbooks"
-date: 2026-05-31 16:00:00 +0100
+date: 2026-05-30 16:00:00 +0100
 categories: [ctri]
 tags: [ssce, textbook, nigeria, education, ctri, cfk]
 pin: true
