@@ -26,3 +26,6 @@ twitter_url:     "https://x.com/ctri_ng"
 
 # Google Analytics
 google_analytics: "G-KZ230MM8PT"
+
+plugins:
+  - jekyll-sitemap
