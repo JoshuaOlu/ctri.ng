@@ -4,8 +4,35 @@ title: "Contributors"
 description: "The people who have contributed their time and skills to building CTRI's free SSCE textbooks."
 ---
 
-{% assign active = site.data.contributors | where: "status", "active" %}
-{% assign inactive = site.data.contributors | where: "status", "inactive" %}
+{% assign subjects_list = "mathematics,physics,chemistry,biology,agricultural-science" | split: "," %}
+
+<!-- Build deduplicated subject leads list -->
+{% assign subject_leads = "" | split: "" %}
+{% for slug in subjects_list %}
+  {% assign s = site.data.subjects[slug] %}
+  {% assign wl = s.writing_lead %}
+  {% assign already = false %}
+  {% for lead in subject_leads %}
+    {% if lead.name == wl.name %}{% assign already = true %}{% endif %}
+  {% endfor %}
+  {% unless already %}
+    {% assign entry = wl | hash %}
+    {% assign subject_leads = subject_leads | push: wl %}
+  {% endunless %}
+  {% if s.creative_steward %}
+    {% assign cs = s.creative_steward %}
+    {% assign already2 = false %}
+    {% for lead in subject_leads %}
+      {% if lead.name == cs.name %}{% assign already2 = true %}{% endif %}
+    {% endfor %}
+    {% unless already2 %}
+      {% assign subject_leads = subject_leads | push: cs %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+{% assign other_active   = site.data.contributors | where: "status", "active" %}
+{% assign other_inactive = site.data.contributors | where: "status", "inactive" %}
 
 <header class="page-header">
   <div class="inner page-header-inner">
@@ -15,42 +42,35 @@ description: "The people who have contributed their time and skills to building 
   </div>
 </header>
 
-<!-- Active contributors -->
 <section class="section section-off">
   <div class="inner">
-    <span class="section-eyebrow">Active Contributors</span>
-    <h2 class="section-h2">Building right now.</h2>
 
+    <!-- PROGRAMME TEAM -->
+    <span class="section-eyebrow">Programme Team</span>
+    <h2 class="section-h2">Running the initiative.</h2>
     <div class="contributors-table-wrap anim">
       <table class="contributors-table">
         <thead>
           <tr>
             <th>Name</th>
-            <th>Role(s)</th>
-            <th>Subject / Area</th>
+            <th>Role · Area</th>
             <th>Since</th>
             <th></th>
           </tr>
         </thead>
         <tbody>
-          {% for person in active %}
+          {% for member in site.data.team %}
           <tr>
-            <td class="contributor-name">{{ person.name }}</td>
-            <td class="contributor-roles">
-              {% for role in person.roles %}
-                <span class="contributor-role-tag">{{ role.title }}</span>
-              {% endfor %}
+            <td class="contributor-name">{{ member.name }}</td>
+            <td>
+              <span class="contributor-role-tag">{{ member.role }}</span>
+              <span class="contributor-area contributor-area-general">General</span>
             </td>
-            <td class="contributor-areas">
-              {% for role in person.roles %}
-                <span class="contributor-area{% if role.area == 'General' %} contributor-area-general{% endif %}">{{ role.area }}</span>
-              {% endfor %}
-            </td>
-            <td class="contributor-period">{{ person.period }}</td>
+            <td class="contributor-period">2025 – present</td>
             <td class="contributor-link">
-              {% if person.linkedin and person.linkedin != "" %}
-              <a href="{{ person.linkedin }}" target="_blank" rel="noopener" aria-label="{{ person.name }} on LinkedIn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              {% if member.linkedin and member.linkedin != "" %}
+              <a href="{{ member.linkedin }}" target="_blank" rel="noopener" aria-label="{{ member.name }} on LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               </a>
               {% endif %}
             </td>
@@ -59,42 +79,103 @@ description: "The people who have contributed their time and skills to building 
         </tbody>
       </table>
     </div>
-  </div>
-</section>
 
-<!-- Past contributors — collapsible -->
-{% if inactive.size > 0 %}
-<section class="section-sm section-white">
-  <div class="inner">
-    <button class="earlier-cohorts-btn" aria-expanded="false" aria-controls="past-contributors"
-            onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); document.getElementById('past-contributors').classList.toggle('collapsed');">
-      <span class="earlier-cohorts-chevron">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </span>
-      Past Contributors · {{ inactive.size }}
-    </button>
-
-    <div class="earlier-cohorts-body collapsed" id="past-contributors">
-      <div class="contributors-table-wrap" style="margin-top:2rem;">
-        <table class="contributors-table contributors-table-inactive">
+    <!-- SUBJECT LEADS -->
+    <div style="margin-top:3rem;">
+      <span class="section-eyebrow">Subject Leads</span>
+      <h2 class="section-h2">Writing the textbooks.</h2>
+      <div class="contributors-table-wrap anim">
+        <table class="contributors-table">
           <thead>
-            <tr><th>Name</th><th>Role(s)</th><th>Subject / Area</th><th>Period</th><th></th></tr>
+            <tr>
+              <th>Name</th>
+              <th>Role · Subject</th>
+              <th>Since</th>
+              <th></th>
+            </tr>
           </thead>
           <tbody>
-            {% for person in inactive %}
+            {% for slug in subjects_list %}
+              {% assign s = site.data.subjects[slug] %}
+
+              <!-- Writing Lead -->
+              {% assign wl = s.writing_lead %}
+              <tr>
+                <td class="contributor-name">{{ wl.name }}</td>
+                <td>
+                  <span class="contributor-role-tag">Writing Lead</span>
+                  <span class="contributor-area">{{ s.name }}</span>
+                </td>
+                <td class="contributor-period">2025 – present</td>
+                <td class="contributor-link">
+                  {% if wl.linkedin and wl.linkedin != "" %}
+                  <a href="{{ wl.linkedin }}" target="_blank" rel="noopener" aria-label="{{ wl.name }} on LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  </a>
+                  {% endif %}
+                </td>
+              </tr>
+
+              <!-- Creative Steward (only if different from writing lead) -->
+              {% if s.creative_steward %}
+              {% assign cs = s.creative_steward %}
+              {% if cs.name != wl.name %}
+              <tr>
+                <td class="contributor-name">{{ cs.name }}</td>
+                <td>
+                  <span class="contributor-role-tag" style="background:rgba(255,120,3,0.1);color:var(--orange);">Creative Steward</span>
+                  <span class="contributor-area">{{ s.name }}</span>
+                </td>
+                <td class="contributor-period">2025 – present</td>
+                <td class="contributor-link">
+                  {% if cs.linkedin and cs.linkedin != "" %}
+                  <a href="{{ cs.linkedin }}" target="_blank" rel="noopener" aria-label="{{ cs.name }} on LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  </a>
+                  {% endif %}
+                </td>
+              </tr>
+              {% endif %}
+              {% endif %}
+
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- OTHER CONTRIBUTORS -->
+    {% if other_active.size > 0 %}
+    <div style="margin-top:3rem;">
+      <span class="section-eyebrow">Other Contributors</span>
+      <h2 class="section-h2">Writers, editors, and more.</h2>
+      <div class="contributors-table-wrap anim">
+        <table class="contributors-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role · Area</th>
+              <th>Period</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for person in other_active %}
             <tr>
               <td class="contributor-name">{{ person.name }}</td>
-              <td class="contributor-roles">
-                {% for role in person.roles %}<span class="contributor-role-tag">{{ role.title }}</span>{% endfor %}
-              </td>
-              <td class="contributor-areas">
-                {% for role in person.roles %}<span class="contributor-area">{{ role.area }}</span>{% endfor %}
+              <td>
+                {% for role in person.roles %}
+                  <div style="display:flex;align-items:center;gap:.4rem;margin-bottom:.2rem;">
+                    <span class="contributor-role-tag">{{ role.title }}</span>
+                    <span class="contributor-area {% if role.area == 'General' %}contributor-area-general{% endif %}">{{ role.area }}</span>
+                  </div>
+                {% endfor %}
               </td>
               <td class="contributor-period">{{ person.period }}</td>
               <td class="contributor-link">
                 {% if person.linkedin and person.linkedin != "" %}
                 <a href="{{ person.linkedin }}" target="_blank" rel="noopener" aria-label="{{ person.name }} on LinkedIn">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 </a>
                 {% endif %}
               </td>
@@ -104,9 +185,53 @@ description: "The people who have contributed their time and skills to building 
         </table>
       </div>
     </div>
+    {% endif %}
+
+    <!-- PAST CONTRIBUTORS -->
+    {% if other_inactive.size > 0 %}
+    <div style="margin-top:3rem;">
+      <button class="earlier-cohorts-btn" aria-expanded="false" aria-controls="past-contributors"
+              onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true');var b=document.getElementById('past-contributors');b.style.maxHeight=b.style.maxHeight?null:b.scrollHeight+'px';">
+        <span class="earlier-cohorts-chevron">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+        Past Contributors · {{ other_inactive.size }}
+      </button>
+      <div id="past-contributors" style="overflow:hidden;max-height:0;transition:max-height .4s ease;">
+        <div class="contributors-table-wrap" style="margin-top:1.5rem;">
+          <table class="contributors-table contributors-table-inactive">
+            <thead><tr><th>Name</th><th>Role · Area</th><th>Period</th><th></th></tr></thead>
+            <tbody>
+              {% for person in other_inactive %}
+              <tr>
+                <td class="contributor-name">{{ person.name }}</td>
+                <td>
+                  {% for role in person.roles %}
+                    <div style="display:flex;align-items:center;gap:.4rem;margin-bottom:.2rem;">
+                      <span class="contributor-role-tag">{{ role.title }}</span>
+                      <span class="contributor-area">{{ role.area }}</span>
+                    </div>
+                  {% endfor %}
+                </td>
+                <td class="contributor-period">{{ person.period }}</td>
+                <td class="contributor-link">
+                  {% if person.linkedin and person.linkedin != "" %}
+                  <a href="{{ person.linkedin }}" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  </a>
+                  {% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
   </div>
 </section>
-{% endif %}
 
 <section class="cta-band">
   <div class="inner cta-band-inner">

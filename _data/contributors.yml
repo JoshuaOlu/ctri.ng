@@ -1,104 +1,26 @@
 # ═══════════════════════════════════════════════════════════════
-# CTRI CONTRIBUTORS
+# CTRI — OTHER CONTRIBUTORS
 # ───────────────────────────────────────────────────────────────
-# This file lists everyone who has contributed to CTRI and has
-# consented to being listed publicly on the contributors page.
+# This file is for contributors NOT already listed as:
+#   - Programme team (team.yml)
+#   - Subject leads (subjects/*.yml)
+# Those are pulled automatically. Only add here: chapter
+# writers, editors, reviewers, formatters, designers, etc.
 #
-# FIELD REFERENCE:
-#   name        Full name as they want it displayed
-#   roles       List of roles — one person can have multiple
-#     title     Role title (e.g. "Chapter Writer", "Editor")
-#     area      Subject or area (e.g. "Mathematics", "General")
-#   period      When they contributed (e.g. "2025 – present")
-#   status      "active" or "inactive"
-#   linkedin    Full LinkedIn URL — optional, leave "" to hide
-#
-# ADDING A CONTRIBUTOR:
-#   Only add someone here if they have explicitly consented
-#   to being listed publicly on the CTRI website.
-#   Add new active contributors at the top of the active section.
-#
-# MARKING INACTIVE:
-#   Change status from "active" to "inactive".
-#   They move to the inactive section automatically.
-#   Do not delete — the record is part of CTRI's history.
+# Only add someone if they have consented to public listing.
+# status: "active" | "inactive"
+# area: subject name or "General" for cross-cutting roles.
 # ═══════════════════════════════════════════════════════════════
 
-# ── ACTIVE CONTRIBUTORS ─────────────────────────────────────────
-
-- name: "Joshua Olunlade"
-  roles:
-    - title: "Writing Lead"
-      area: "Mathematics"
-  period: "2023 – present"
-  status: "active"
-  linkedin: "https://www.linkedin.com/in/joshuaolunlade/"
-
-- name: "Mary Olowolafe"
-  roles:
-    - title: "Writing Lead"
-      area: "Physics"
-  period: "2025 – present"
-  status: "active"
-  linkedin: "https://www.linkedin.com/in/mofiyinfoluwa-olowolafe-109604251/"
-
-- name: "Cornelius Aboderin"
-  roles:
-    - title: "Programme Coordinator"
-      area: "General"
-    - title: "Writing Lead"
-      area: "Chemistry"
-  period: "2025 – present"
-  status: "active"
-  linkedin: "https://www.linkedin.com/in/corneliusaboderin/"
-
-- name: "Oreoluwa Otitoola"
-  roles:
-    - title: "Writing Lead"
-      area: "Biology"
-  period: "2025 – present"
-  status: "active"
-  linkedin: "https://www.linkedin.com/in/oreoluwa-otitoola-25b934291/"
-
-- name: "Israel Aponjolosun"
-  roles:
-    - title: "Creative Steward"
-      area: "Biology"
-  period: "2025 – present"
-  status: "active"
-  linkedin: "https://www.linkedin.com/in/israel-aponjolosun-95a3aa226/"
-
-- name: "Deborah Awujoola"
-  roles:
-    - title: "Writing Lead"
-      area: "Agricultural Science"
-  period: "2025 – present"
-  status: "active"
-  linkedin: "https://www.linkedin.com/in/deborah-awujoola/"
-
-- name: "Christianah Omofoye"
-  roles:
-    - title: "Volunteer Manager"
-      area: "General"
-  period: "2025 – present"
-  status: "active"
-  linkedin: "https://www.linkedin.com/in/christianahomofoye/"
-
-- name: "Janet Fasoro"
-  roles:
-    - title: "Programme Administrator"
-      area: "General"
-  period: "2025 – present"
-  status: "active"
-  linkedin: "https://www.linkedin.com/in/janet-fasoro/"
-
-# ── INACTIVE / PAST CONTRIBUTORS ────────────────────────────────
-# Add past contributors here when they step back.
+# Add contributors below as they join and consent to listing.
 # Example:
-# - name: "Example Name"
+#
+# - name: "Amara Obi"
 #   roles:
 #     - title: "Chapter Writer"
 #       area: "Mathematics"
-#   period: "2025 – 2026"
-#   status: "inactive"
+#     - title: "Editor"
+#       area: "General"
+#   period: "2026 – present"
+#   status: "active"
 #   linkedin: ""
