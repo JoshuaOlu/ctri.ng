@@ -24,3 +24,12 @@
 #   period: "2026 – present"
 #   status: "active"
 #   linkedin: ""
+
+
+- name: "Sunday Alayemi"
+  roles:
+    - title: "Writer"
+      area: "Mathematics"
+  period: "Feb 2026 – present"
+  status: "active"
+  linkedin: "https://www.linkedin.com/in/alayemi-sunday-078476204/"
