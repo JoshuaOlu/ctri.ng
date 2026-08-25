@@ -1,9 +1,7 @@
 {% comment %}
-  Renders the full chapter roadmap for a subject.
-  Usage: {% include chapter-table.html subject=subject_data %}
+  url field in chapter YAML = DOI link: https://doi.org/10.5281/zenodo.XXXXXXX
 {% endcomment %}
 {% assign subject = include.subject %}
-
 <div class="chapter-table-wrap">
   {% for theme in subject.themes %}
   <div class="theme-block anim">
@@ -11,41 +9,37 @@
       <span class="theme-number">Theme {{ theme.number }}</span>
       <span class="theme-title">{{ theme.title }}</span>
     </div>
-    <table class="chapter-table">
-      <thead>
-        <tr>
-          <th class="ch-col-num">Chapter</th>
-          <th class="ch-col-title">Title</th>
-          <th class="ch-col-status">Status</th>
-          <th class="ch-col-version">Version</th>
-          <th class="ch-col-resource">Resource</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for chapter in theme.chapters %}
-        <tr class="ch-row ch-status-{{ chapter.status | downcase | replace: ' ', '-' }}">
-          <td class="ch-col-num">{{ chapter.number }}</td>
-          <td class="ch-col-title">{{ chapter.title }}</td>
-          <td class="ch-col-status">
-            <span class="ch-badge ch-badge-{{ chapter.status | downcase | replace: ' ', '-' }}">
-              {{ chapter.status }}
-            </span>
-          </td>
-          <td class="ch-col-version">
-            {% if chapter.version and chapter.version != "" %}{{ chapter.version }}{% else %}—{% endif %}
-          </td>
-          <td class="ch-col-resource">
-            {% if chapter.url and chapter.url != "" %}
-              <a href="{{ chapter.url }}" class="ch-download" target="_blank">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Download
-              </a>
-            {% else %}—{% endif %}
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+    <div class="chapter-table-scroll">
+      <table class="chapter-table">
+        <thead>
+          <tr>
+            <th class="ch-col-num">Ch.</th>
+            <th class="ch-col-title">Title</th>
+            <th class="ch-col-status">Status</th>
+            <th class="ch-col-resource ch-hide-mobile">Zenodo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for chapter in theme.chapters %}
+          <tr class="ch-row ch-status-{{ chapter.status | downcase | replace: ' ', '-' }}">
+            <td class="ch-col-num">{{ chapter.number }}</td>
+            <td class="ch-col-title">{{ chapter.title }}</td>
+            <td class="ch-col-status">
+              <span class="ch-badge ch-badge-{{ chapter.status | downcase | replace: ' ', '-' }}">{{ chapter.status }}</span>
+            </td>
+            <td class="ch-col-resource ch-hide-mobile">
+              {% if chapter.url and chapter.url != "" %}
+                <a href="{{ chapter.url }}" class="ch-doi-link" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  View on Zenodo
+                </a>
+              {% else %}—{% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </div>
   {% endfor %}
 </div>

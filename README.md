@@ -94,6 +94,49 @@ Push to `main`. GitHub Pages builds and deploys automatically.
 
 ---
 
+## Zenodo — publishing chapters
+
+Each published chapter gets its own Zenodo record and DOI.
+
+**Naming convention for Zenodo records:**
+```
+CTRI — [Subject] — Chapter [N.N]: [Title] (v[version])
+```
+Example: `CTRI — Mathematics — Chapter 1.1: The Number System (v1.0)`
+
+**After publishing on Zenodo:**
+1. Copy the DOI link (e.g. `https://doi.org/10.5281/zenodo.XXXXXXX`)
+2. Open `_data/subjects/[subject].yml`
+3. Find the chapter, set `status: "Published"`, `version: "1.0"`, `url: "https://doi.org/10.5281/zenodo.XXXXXXX"`
+4. Commit and push — the "View on Zenodo" button appears automatically
+
+**CTRI Zenodo community:** Add every record to the CTRI community on Zenodo so all chapters are grouped under one initiative, even though each has its own DOI.
+
+---
+
+## Contributors page
+
+Contributors are listed in `_data/contributors.yml`. **Only add someone if they have explicitly consented to being listed publicly.**
+
+To add a contributor:
+```yaml
+- name: "Full Name"
+  roles:
+    - title: "Chapter Writer"
+      area: "Mathematics"
+    - title: "Editor"        # multiple roles supported
+      area: "General"
+  period: "2025 – present"
+  status: "active"          # active | inactive
+  linkedin: ""              # optional
+```
+
+To mark inactive: change `status: "active"` to `status: "inactive"`. They move to the collapsible past contributors section automatically. Do not delete — the record is part of CTRI's history.
+
+`area: "General"` is used for cross-cutting roles like editing, formatting, or design that aren't specific to one subject.
+
+---
+
 ## Colour system
 
 | Token | Value | Use |

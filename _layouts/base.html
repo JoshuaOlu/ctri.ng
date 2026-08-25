@@ -52,6 +52,35 @@
     const ham = document.querySelector('.nav-hamburger');
     const navLinks = document.querySelector('.nav-links');
     if (ham) ham.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+    // Hero heading — word by word animation
+    const heroH1 = document.querySelector('.hero-h1');
+    if (heroH1) {
+      const html = heroH1.innerHTML;
+      // Wrap each word in a span, preserving HTML tags
+      heroH1.innerHTML = html.replace(/(\w+)/g, (word) => `<span class="hero-word">${word}</span>`);
+      const words = heroH1.querySelectorAll('.hero-word');
+      words.forEach((word, i) => {
+        setTimeout(() => {
+          word.classList.add('visible');
+        }, 120 + i * 60);
+      });
+    }
+
+    // Chapter status badge animation — trigger when table enters view
+    const badgeObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.ch-badge-published, .ch-badge-in-progress').forEach(badge => {
+            badge.style.animation = 'none';
+            badge.offsetHeight; // reflow
+            badge.style.animation = '';
+          });
+          badgeObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.chapter-table').forEach(t => badgeObs.observe(t));
   </script>
 
 </body>
