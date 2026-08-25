@@ -11,15 +11,17 @@ color: "#FF7803"
 status: "In Development"
 
 # ── LEADS ───────────────────────────────────────────────────────
+creative_steward:
+  name: "Israel Aponjolosun"
+  linkedin: "https://www.linkedin.com/in/israel-aponjolosun-95a3aa226/"
+  fellow_slug: "israel-aponjolosun"
+
 writing_lead:
   name: "Oreoluwa Otitoola"
   linkedin: "https://www.linkedin.com/in/oreoluwa-otitoola-25b934291/"
   fellow_slug: "oreoluwa-otitoola"
 
-creative_steward:
-  name: "Israel Aponjolosun"
-  linkedin: "https://www.linkedin.com/in/israel-aponjolosun-95a3aa226/"
-  fellow_slug: "israel-aponjolosun"
+
 
 # ── THEMES & CHAPTERS ───────────────────────────────────────────
 themes:
