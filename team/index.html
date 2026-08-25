@@ -1,0 +1,127 @@
+---
+layout: base
+title: "Our Team"
+description: "The people building CTRI — the programme coordinator, volunteer manager, and subject leads for each textbook."
+---
+
+{% assign subjects_list = "mathematics,physics,chemistry,biology,agricultural-science" | split: "," %}
+{% assign fellowship_base = site.fellowship_url %}
+
+<header class="page-header">
+  <div class="inner page-header-inner">
+    <span class="page-eyebrow">CTRI · People</span>
+    <h1 class="page-title">The Team</h1>
+    <p class="page-intro">CTRI is built by CFK Fellows — young Nigerians who know what it felt like not to have a good textbook.</p>
+  </div>
+</header>
+
+<!-- Programme team -->
+<section class="section section-off">
+  <div class="inner">
+    <span class="section-eyebrow">Programme Team</span>
+    <h2 class="section-h2">Running the initiative.</h2>
+    <div class="person-cards-grid anim">
+      {% for member in site.data.team %}
+        {% include person-card.html person=member role_label=member.role %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Subject leads -->
+<section class="section section-white">
+  <div class="inner">
+    <span class="section-eyebrow">Subject Leads</span>
+    <h2 class="section-h2">Writing the textbooks.</h2>
+    <p class="section-body">Each subject is led by a Writing Lead responsible for the textbook's content and structure. Biology also has a separate Creative Steward.</p>
+
+    {% for slug in subjects_list %}
+      {% assign s = site.data.subjects[slug] %}
+      <div class="anim" style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+          <span style="font-size:1.5rem;">{{ s.icon }}</span>
+          <a href="/subjects/{{ slug }}/" style="font-size:1.1rem;font-weight:900;color:var(--text);letter-spacing:-.01em;">{{ s.name }}</a>
+        </div>
+        <div class="subject-leads">
+
+          <!-- Writing Lead -->
+          {% assign wl = s.writing_lead %}
+          {% if wl.fellow_slug and wl.fellow_slug != "" %}
+            {% assign wl_photo = fellowship_base | append: "/assets/images/fellows/" | append: wl.fellow_slug | append: ".jpg" %}
+          {% else %}
+            {% assign wl_photo = "" %}
+          {% endif %}
+          <div class="subject-lead-card">
+            <div class="subject-lead-photo">
+              {% if wl_photo != "" %}<img src="{{ wl_photo }}" alt="{{ wl.name }}" loading="lazy" onerror="this.style.display='none';">{% endif %}
+              <span class="subject-lead-initials">{{ wl.name | split: " " | first | slice: 0 }}{{ wl.name | split: " " | last | slice: 0 }}</span>
+            </div>
+            <div class="subject-lead-info">
+              <div class="subject-lead-role">Writing Lead</div>
+              <div class="subject-lead-name">{{ wl.name }}</div>
+              <div class="subject-lead-links">
+                {% if wl.linkedin and wl.linkedin != "" %}
+                <a href="{{ wl.linkedin }}" target="_blank" rel="noopener" class="subject-lead-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+                {% endif %}
+                {% if wl.fellow_slug and wl.fellow_slug != "" %}
+                <a href="{{ fellowship_base }}/fellows/{{ wl.fellow_slug }}/" target="_blank" rel="noopener" class="subject-lead-link">
+                  <img src="/assets/images/icons/cfk-icon-dark.png" alt="">
+                  CFK Profile
+                </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+          <!-- Creative Steward -->
+          {% if s.creative_steward %}
+          {% assign cs = s.creative_steward %}
+          {% if cs.fellow_slug and cs.fellow_slug != "" %}
+            {% assign cs_photo = fellowship_base | append: "/assets/images/fellows/" | append: cs.fellow_slug | append: ".jpg" %}
+          {% else %}
+            {% assign cs_photo = "" %}
+          {% endif %}
+          <div class="subject-lead-card" style="border-left-color:var(--orange);">
+            <div class="subject-lead-photo">
+              {% if cs_photo != "" %}<img src="{{ cs_photo }}" alt="{{ cs.name }}" loading="lazy" onerror="this.style.display='none';">{% endif %}
+              <span class="subject-lead-initials">{{ cs.name | split: " " | first | slice: 0 }}{{ cs.name | split: " " | last | slice: 0 }}</span>
+            </div>
+            <div class="subject-lead-info">
+              <div class="subject-lead-role" style="color:var(--orange);">Creative Steward</div>
+              <div class="subject-lead-name">{{ cs.name }}</div>
+              <div class="subject-lead-links">
+                {% if cs.linkedin and cs.linkedin != "" %}
+                <a href="{{ cs.linkedin }}" target="_blank" rel="noopener" class="subject-lead-link">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+                {% endif %}
+                {% if cs.fellow_slug and cs.fellow_slug != "" %}
+                <a href="{{ fellowship_base }}/fellows/{{ cs.fellow_slug }}/" target="_blank" rel="noopener" class="subject-lead-link">
+                  <img src="/assets/images/icons/cfk-icon-dark.png" alt="">
+                  CFK Profile
+                </a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="inner cta-band-inner">
+    <div>
+      <div class="cta-band-heading">Want to join this team?</div>
+      <p class="cta-band-sub">See open volunteer roles or apply to the CFK Fellowship.</p>
+    </div>
+    <a href="/volunteer/" class="btn-white">See Open Roles</a>
+  </div>
+</section>

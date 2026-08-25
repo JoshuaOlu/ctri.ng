@@ -1,0 +1,117 @@
+# ═══════════════════════════════════════════════════════════════
+# CHEMISTRY — Subject Data
+# ═══════════════════════════════════════════════════════════════
+
+name: "Chemistry"
+slug: "chemistry"
+tagline: "The science of matter and change."
+description: "The CTRI Chemistry textbook covers the full SS1–SS3 WAEC syllabus — from atomic structure and bonding through to organic chemistry — in a conversational style that makes complex concepts approachable."
+icon: "⚗️"
+color: "#F60700"
+status: "In Development"
+
+# ── LEADS ───────────────────────────────────────────────────────
+writing_lead:
+  name: "Cornelius Aboderin"
+  linkedin: "https://www.linkedin.com/in/corneliusaboderin/"
+  fellow_slug: "cornelius-aboderin"
+
+creative_steward: null   # same as writing lead or not yet assigned
+
+# ── THEMES & CHAPTERS ───────────────────────────────────────────
+themes:
+  - number: 1
+    title: "Atomic Structure & Bonding"
+    chapters:
+      - number: "1.1"
+        title: "Atomic Structure"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "1.2"
+        title: "Chemical Bonding"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "1.3"
+        title: "Periodic Table"
+        status: "Not Started"
+        version: ""
+        url: ""
+  - number: 2
+    title: "States of Matter & Mixtures"
+    chapters:
+      - number: "2.1"
+        title: "States of Matter"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "2.2"
+        title: "Separation Techniques"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "2.3"
+        title: "Solutions & Solubility"
+        status: "Not Started"
+        version: ""
+        url: ""
+  - number: 3
+    title: "Chemical Reactions"
+    chapters:
+      - number: "3.1"
+        title: "Chemical Equations & Stoichiometry"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "3.2"
+        title: "Acids, Bases & Salts"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "3.3"
+        title: "Oxidation & Reduction"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "3.4"
+        title: "Electrochemistry"
+        status: "Not Started"
+        version: ""
+        url: ""
+  - number: 4
+    title: "Kinetics & Equilibrium"
+    chapters:
+      - number: "4.1"
+        title: "Energy Changes in Reactions"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "4.2"
+        title: "Reaction Rates"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "4.3"
+        title: "Chemical Equilibrium"
+        status: "Not Started"
+        version: ""
+        url: ""
+  - number: 5
+    title: "Organic Chemistry"
+    chapters:
+      - number: "5.1"
+        title: "Introduction to Organic Chemistry"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "5.2"
+        title: "Hydrocarbons"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "5.3"
+        title: "Organic Functional Groups"
+        status: "Not Started"
+        version: ""
+        url: ""

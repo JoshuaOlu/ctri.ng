@@ -1,0 +1,84 @@
+---
+layout: base
+title: "Volunteer"
+description: "Volunteer with CTRI — help build free SSCE textbooks for Nigerian secondary school students."
+---
+
+<header class="page-header">
+  <div class="inner page-header-inner">
+    <span class="page-eyebrow">CTRI · Get Involved</span>
+    <h1 class="page-title">Volunteer.</h1>
+    <p class="page-intro">CTRI is built by people who care. If you have skills that can help us build better textbooks, we want to hear from you.</p>
+  </div>
+</header>
+
+<!-- Open roles -->
+<section class="section section-off">
+  <div class="inner">
+    <span class="section-eyebrow">Open Roles</span>
+    <h2 class="section-h2">What we need right now.</h2>
+    <p class="section-body">These are the specific roles we are actively recruiting for. Each role has a clear scope and a direct impact on the textbooks we are building.</p>
+
+    {% assign open_roles = site.data.volunteer_roles | where: "status", "open" %}
+    {% if open_roles.size > 0 %}
+    <div class="roles-list anim">
+      {% for role in open_roles %}
+      <div class="role-card">
+        <div class="role-card-header">
+          <div class="role-card-title">{{ role.title }}</div>
+          <span class="role-card-subject">{{ role.subject }}</span>
+        </div>
+        <div class="role-card-commitment">⏱ {{ role.commitment }}</div>
+        <p class="role-card-desc">{{ role.description }}</p>
+        {% if role.what_you_will_do and role.what_you_will_do.size > 0 %}
+        <ul class="role-card-bullets">
+          {% for item in role.what_you_will_do %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if role.apply_url and role.apply_url != "" %}
+          <a href="{{ role.apply_url }}" target="_blank" class="btn-red" style="font-size:.8rem;padding:12px 28px;">Apply for this role</a>
+        {% else %}
+          <a href="mailto:{{ site.email }}?subject=Volunteer enquiry: {{ role.title }}" class="btn-red" style="font-size:.8rem;padding:12px 28px;">Express interest</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="anim" style="background:var(--white);border:1px solid var(--border);padding:2.5rem;margin-top:2.5rem;">
+      <p style="color:var(--muted);font-size:.95rem;">No specific roles are open right now. Check back soon — or reach out directly at <a href="mailto:{{ site.email }}" style="color:var(--red);">{{ site.email }}</a> if you'd like to get involved.</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- General contribution -->
+<section class="section section-white anim">
+  <div class="inner" style="max-width:720px;">
+    <span class="section-eyebrow">Other Ways to Contribute</span>
+    <h2 class="section-h2">Not seeing your skill here?</h2>
+    <p class="section-body">We welcome contributions from educators, subject specialists, designers, editors, and anyone who shares a commitment to improving access to education. Reach out at <a href="mailto:{{ site.email }}" style="color:var(--red);font-weight:700;">{{ site.email }}</a> and tell us what you can offer.</p>
+  </div>
+</section>
+
+<!-- Fellowship note -->
+<section class="section section-off anim">
+  <div class="inner" style="max-width:720px;">
+    <span class="section-eyebrow">Looking for Something More Sustained?</span>
+    <h2 class="section-h2">Consider the CFK Fellowship.</h2>
+    <p class="section-body" style="margin-bottom:2rem;">The CFK Fellowship is a structured volunteer community for young Nigerians making long-term contributions to CFK's work — including CTRI. Fellows receive progression, recognition, and a genuine community of people committed to the same mission. If you want to go deeper than a single volunteer role, the Fellowship is where that happens.</p>
+    <a href="{{ site.fellowship_url }}" target="_blank" class="btn-outline-dark">Learn about the CFK Fellowship →</a>
+  </div>
+</section>
+
+<!-- Donate -->
+<section class="cta-band">
+  <div class="inner cta-band-inner">
+    <div>
+      <div class="cta-band-heading">Support CTRI financially.</div>
+      <p class="cta-band-sub">Donations fund writers, editors, and the infrastructure that makes the textbooks possible.</p>
+    </div>
+    <a href="{{ site.donate_url }}" target="_blank" class="btn-white">Donate to CFK</a>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" style="display:inline-block;margin-bottom:1rem;">
+          <img src="/assets/images/logo/ctri-logo-red-sm.png"
+               alt="CTRI"
+               style="height:32px;width:auto;filter:brightness(0) invert(1);"
+               onerror="this.style.display='none';">
+        </a>
+        <p class="footer-brand-desc">Free, contextualised, conversational SSCE textbooks for Nigerian secondary school students.</p>
+        <p class="footer-brand-cfk">An initiative of <a href="{{ site.cfk_url }}" target="_blank">Care for Knowledge</a></p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-nav-col">
+          <div class="footer-nav-heading">Textbooks</div>
+          <a href="/subjects/mathematics/">Mathematics</a>
+          <a href="/subjects/physics/">Physics</a>
+          <a href="/subjects/chemistry/">Chemistry</a>
+          <a href="/subjects/biology/">Biology</a>
+          <a href="/subjects/agricultural-science/">Agricultural Science</a>
+        </div>
+        <div class="footer-nav-col">
+          <div class="footer-nav-heading">Initiative</div>
+          <a href="/about/">About CTRI</a>
+          <a href="/team/">Our Team</a>
+          <a href="/volunteer/">Volunteer</a>
+          <a href="{{ site.donate_url }}" target="_blank">Donate</a>
+          <a href="{{ site.cfk_url }}" target="_blank">Care for Knowledge</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© {{ 'now' | date: "%Y" }} Care for Knowledge. CTRI textbooks are free to access, download, and print.</span>
+      <a href="mailto:{{ site.email }}" class="footer-email">{{ site.email }}</a>
+    </div>
+  </div>
+</footer>

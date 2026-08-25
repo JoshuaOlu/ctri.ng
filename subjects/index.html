@@ -1,0 +1,30 @@
+---
+layout: base
+title: "Textbooks"
+description: "Free SSCE textbooks for Nigerian students — Mathematics, Physics, Chemistry, Biology, and Agricultural Science."
+---
+{% assign subjects_list = "mathematics,physics,chemistry,biology,agricultural-science" | split: "," %}
+<header class="page-header">
+  <div class="inner page-header-inner">
+    <span class="page-eyebrow">CTRI · Open Textbooks</span>
+    <h1 class="page-title">Free SSCE Textbooks</h1>
+    <p class="page-intro">Five subjects. All free to access, download, and print. Built for Nigerian students preparing for WAEC.</p>
+  </div>
+</header>
+<main class="section section-off">
+  <div class="inner">
+    <div class="subjects-grid anim">
+      {% for slug in subjects_list %}
+        {% assign s = site.data.subjects[slug] %}
+        <a href="/subjects/{{ slug }}/" class="subject-card" style="--subject-color: {{ s.color }};">
+          <div class="subject-card-icon">{{ s.icon }}</div>
+          <div class="subject-card-name">{{ s.name }}</div>
+          <div class="subject-card-tagline">{{ s.tagline }}</div>
+          <p style="font-size:.88rem;line-height:1.7;color:var(--muted);margin-bottom:1.25rem;flex:1;">{{ s.description | truncate: 120 }}</p>
+          <div class="subject-card-status">{{ s.status }}</div>
+          <span class="subject-card-link">View textbook</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</main>

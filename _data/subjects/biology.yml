@@ -1,0 +1,115 @@
+# ═══════════════════════════════════════════════════════════════
+# BIOLOGY — Subject Data
+# ═══════════════════════════════════════════════════════════════
+
+name: "Biology"
+slug: "biology"
+tagline: "Life, explained."
+description: "The CTRI Biology textbook takes SS1–SS3 students through the living world — from cell biology through ecology — in clear, contextualised language written for Nigerian learners."
+icon: "🧬"
+color: "#FF7803"
+status: "In Development"
+
+# ── LEADS ───────────────────────────────────────────────────────
+writing_lead:
+  name: "Oreoluwa Otitoola"
+  linkedin: "https://www.linkedin.com/in/oreoluwa-otitoola-25b934291/"
+  fellow_slug: "oreoluwa-otitoola"
+
+creative_steward:
+  name: "Israel Aponjolosun"
+  linkedin: "https://www.linkedin.com/in/israel-aponjolosun-95a3aa226/"
+  fellow_slug: "israel-aponjolosun"
+
+# ── THEMES & CHAPTERS ───────────────────────────────────────────
+themes:
+  - number: 1
+    title: "Cell Biology"
+    chapters:
+      - number: "1.1"
+        title: "The Cell"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "1.2"
+        title: "Cell Division"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "1.3"
+        title: "Cell Transport"
+        status: "Not Started"
+        version: ""
+        url: ""
+  - number: 2
+    title: "Plant Biology"
+    chapters:
+      - number: "2.1"
+        title: "Plant Nutrition"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "2.2"
+        title: "Transport in Plants"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "2.3"
+        title: "Plant Reproduction"
+        status: "Not Started"
+        version: ""
+        url: ""
+  - number: 3
+    title: "Animal Biology"
+    chapters:
+      - number: "3.1"
+        title: "Nutrition & Digestion"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "3.2"
+        title: "Circulatory System"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "3.3"
+        title: "Respiratory System"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "3.4"
+        title: "Excretion"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "3.5"
+        title: "Nervous & Endocrine Systems"
+        status: "Not Started"
+        version: ""
+        url: ""
+  - number: 4
+    title: "Genetics & Evolution"
+    chapters:
+      - number: "4.1"
+        title: "Heredity & Genetics"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "4.2"
+        title: "Evolution"
+        status: "Not Started"
+        version: ""
+        url: ""
+  - number: 5
+    title: "Ecology & Environment"
+    chapters:
+      - number: "5.1"
+        title: "Ecology"
+        status: "Not Started"
+        version: ""
+        url: ""
+      - number: "5.2"
+        title: "Environmental Issues"
+        status: "Not Started"
+        version: ""
+        url: ""

@@ -1,0 +1,25 @@
+# ═══════════════════════════════════════════════════════════════
+# CTRI VOLUNTEER ROLES
+# ───────────────────────────────────────────────────────────────
+# status: "open" | "filled" | "paused"
+#   Only "open" roles appear on the volunteer page.
+#   Change to "filled" or "paused" to remove without deleting.
+#
+# subject: the subject this role is for, or "All Subjects" for
+#   cross-cutting roles.
+#
+# apply_url: link to the application form for this specific role.
+#   Can be a Google Form or any external link.
+# ═══════════════════════════════════════════════════════════════
+
+- title: "Problems & Solutions Writer"
+  subject: "Mathematics"
+  status: "open"
+  commitment: "3–5 hours per week"
+  description: "Help develop the Mathematics textbook by writing clear, step-by-step worked solutions to practice problems. You will take problem sets and produce clean, student-friendly solutions that guide learners through each concept. Strong Mathematics background required — you should be comfortable with the full SS1–SS3 curriculum."
+  what_you_will_do:
+    - "Write detailed, step-by-step solutions to assigned problem sets"
+    - "Ensure solutions are clear, accurate, and written in CTRI's conversational style"
+    - "Work closely with the Mathematics Writing Lead to align with textbook structure"
+    - "Revise solutions based on reviewer feedback"
+  apply_url: ""   # Add the application form URL here when ready

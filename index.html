@@ -1,4 +1,137 @@
 ---
-layout: home
-# Index page
+layout: base
 ---
+
+{% assign subjects_list = "mathematics,physics,chemistry,biology,agricultural-science" | split: "," %}
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content inner">
+    <div class="hero-eyebrow">Collaborative Tutorial Resources Initiative</div>
+    <h1 class="hero-h1">Free textbooks for every<br><em>Nigerian student.</em></h1>
+    <p class="hero-sub">CTRI is building free, contextualised, conversational SSCE textbooks — written by Nigerians, for Nigerian students. No cost. No barriers. Open to everyone.</p>
+    <div class="hero-ctas">
+      <a href="/subjects/" class="btn-red">See Our Textbooks</a>
+      <a href="/volunteer/" class="btn-outline-white">Volunteer</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">5</div>
+        <div class="hero-stat-label">Subjects in Development</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">10<span>+</span></div>
+        <div class="hero-stat-label">Textbooks by 2030</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">0<span>₦</span></div>
+        <div class="hero-stat-label">Cost to Students</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- THE PROBLEM -->
+<section class="section section-dark anim">
+  <div class="inner">
+    <span class="section-eyebrow section-eyebrow-light">Why CTRI Exists</span>
+    <h2 class="section-h2 section-h2-light">Three barriers stand between Nigerian students and the resources they need.</h2>
+    <div class="barriers-grid">
+      <div class="barrier-card">
+        <div class="barrier-icon">💰</div>
+        <div class="barrier-title">The cost barrier</div>
+        <p class="barrier-body">Quality textbooks exist. Many Nigerian students simply cannot afford them. The solution is not to write better textbooks — it is to write free ones.</p>
+      </div>
+      <div class="barrier-card">
+        <div class="barrier-icon">🌍</div>
+        <div class="barrier-title">The context barrier</div>
+        <p class="barrier-body">Free resources exist — but most were written outside Nigeria. A student who cannot locate themselves in a textbook still faces a barrier. Context is not cosmetic. It is part of how learning works.</p>
+      </div>
+      <div class="barrier-card">
+        <div class="barrier-icon">📖</div>
+        <div class="barrier-title">The register barrier</div>
+        <p class="barrier-body">Even good textbooks are often written in formal academic language that is itself a barrier. CTRI writes like a teacher explaining something — not a textbook performing complexity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEXTBOOKS IN DEVELOPMENT -->
+<section class="section section-off anim">
+  <div class="inner">
+    <span class="section-eyebrow">Textbooks in Development</span>
+    <h2 class="section-h2">Five subjects. One goal.</h2>
+    <p class="section-body">Every textbook is designed for SS1–SS3 students preparing for WAEC. Free to access, free to download, free to print.</p>
+    <div class="subjects-grid">
+      {% for slug in subjects_list %}
+        {% assign s = site.data.subjects[slug] %}
+        <a href="/subjects/{{ slug }}/" class="subject-card" style="--subject-color: {{ s.color }};">
+          <div class="subject-card-icon">{{ s.icon }}</div>
+          <div class="subject-card-name">{{ s.name }}</div>
+          <div class="subject-card-tagline">{{ s.tagline }}</div>
+          <div class="subject-card-status">{{ s.status }}</div>
+          <span class="subject-card-link">Explore textbook</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section-black2 anim">
+  <div class="inner">
+    <span class="section-eyebrow section-eyebrow-light">How It Works</span>
+    <h2 class="section-h2 section-h2-light">Built openly. Improved continuously.</h2>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">01</div>
+        <div class="how-step-title">Write</div>
+        <p class="how-step-body">University-level contributors write chapters in <span class="how-step-accent">conversational, teacher-like language</span> — structured for self-study, specific to the Nigerian context.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">02</div>
+        <div class="how-step-title">Review</div>
+        <p class="how-step-body">Chapters are reviewed by subject experts and tested with <span class="how-step-accent">actual secondary school students</span>. Feedback shapes every revision.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">03</div>
+        <div class="how-step-title">Publish</div>
+        <p class="how-step-body">Completed chapters are published as <span class="how-step-accent">open educational resources</span> — free to access online, free to download, free to print.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">04</div>
+        <div class="how-step-title">Distribute</div>
+        <p class="how-step-body">Because CFK owns the copyright, printed copies can reach <span class="how-step-accent">students in hard-to-reach communities</span> where internet access is limited.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM SNAPSHOT -->
+<section class="section section-off anim">
+  <div class="inner">
+    <span class="section-eyebrow">The Team</span>
+    <h2 class="section-h2">Built by young Nigerians.</h2>
+    <p class="section-body">CTRI is developed by CFK Fellows — university students and graduates who know what it felt like not to have a good textbook.</p>
+    <div class="person-cards-grid" style="margin-top:2.5rem;">
+      {% for member in site.data.team %}
+        {% include person-card.html person=member role_label=member.role %}
+      {% endfor %}
+    </div>
+    <p style="margin-top:2rem;"><a href="/team/" style="font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);border-bottom:1px solid var(--red);padding-bottom:2px;">Meet the full team →</a></p>
+  </div>
+</section>
+
+<!-- GET INVOLVED -->
+<section class="cta-band anim">
+  <div class="inner cta-band-inner">
+    <div>
+      <div class="cta-band-heading">Two ways to be part of this.</div>
+      <p class="cta-band-sub">Contribute your skills, or contribute funds. Both matter.</p>
+    </div>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="/volunteer/" class="btn-white">Volunteer</a>
+      <a href="{{ site.donate_url }}" target="_blank" style="display:inline-block;border:2px solid rgba(255,255,255,.5);color:var(--white);font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;padding:14px 32px;transition:border-color .2s;">Donate</a>
+    </div>
+  </div>
+</section>

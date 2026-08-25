@@ -1,0 +1,22 @@
+# ═══════════════════════════════════════════════════════════════
+# CTRI TEAM
+# ───────────────────────────────────────────────────────────────
+# fellow_slug: used to link to their CFK Fellowship profile page
+#   and to load their photo from the Fellowship site.
+#   Leave blank ("") if they are not a CFK Fellow.
+# photo_override: set a local path to use instead of the
+#   Fellowship photo — e.g. "/assets/images/team/name.jpg"
+#   Leave blank to use the Fellowship photo automatically.
+# ═══════════════════════════════════════════════════════════════
+
+- name: "Cornelius Aboderin"
+  role: "Programme Coordinator"
+  linkedin: "https://www.linkedin.com/in/corneliusaboderin/"
+  fellow_slug: "cornelius-aboderin"
+  photo_override: ""
+
+- name: "Christianah Omofoye"
+  role: "Volunteer Manager"
+  linkedin: "https://www.linkedin.com/in/christianahomofoye/"
+  fellow_slug: "christianah-omofoye"
+  photo_override: ""

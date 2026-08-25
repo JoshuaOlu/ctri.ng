@@ -1,0 +1,25 @@
+<nav class="nav" role="navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand" aria-label="CTRI Home">
+      <img src="/assets/images/logo/ctri-logo-white-sm.png"
+           alt="CTRI"
+           style="height:32px;width:auto;"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <span class="nav-brand-fallback" style="display:none;">
+        <span class="nav-brand-ctri">CTRI</span><span class="nav-brand-dot">.</span>
+      </span>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="/subjects/" class="nav-link {% if page.url contains 'subjects' %}nav-link-active{% endif %}">Textbooks</a></li>
+      <li><a href="/about/" class="nav-link {% if page.url contains 'about' %}nav-link-active{% endif %}">About</a></li>
+      <li><a href="/team/" class="nav-link {% if page.url contains 'team' %}nav-link-active{% endif %}">Team</a></li>
+      <li><a href="/volunteer/" class="nav-link {% if page.url contains 'volunteer' %}nav-link-active{% endif %}">Volunteer</a></li>
+      <li><a href="{{ site.donate_url }}" target="_blank" class="nav-cta">Donate</a></li>
+    </ul>
+
+    <button class="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
