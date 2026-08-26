@@ -312,6 +312,22 @@ a{text-decoration:none;}
 .contributor-link a svg { width: 16px; height: 16px; }
 .contributor-link a:hover { color: #0077b5; }
 .contributors-table-inactive .contributor-name { color: var(--muted); }
+/* contributor two-button group */
+.contributor-link { vertical-align: middle; }
+.contributor-link-group { display: flex; align-items: center; gap: .4rem; flex-wrap: nowrap; }
+.contributor-btn {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: .68rem; font-weight: 700; letter-spacing: .04em;
+  color: var(--muted); white-space: nowrap;
+  border: 1px solid var(--border); border-radius: 3px;
+  padding: 3px 7px; transition: color .2s, border-color .2s;
+  text-decoration: none;
+}
+.contributor-btn svg { width: 11px; height: 11px; flex-shrink: 0; }
+.contributor-btn img { width: 11px; height: 11px; object-fit: contain; flex-shrink: 0; }
+.contributor-btn-linkedin:hover { color: #0077b5; border-color: #0077b5; }
+.contributor-btn-cfk:hover { color: var(--red); border-color: var(--red); }
+
 .earlier-cohorts-body { overflow: hidden; transition: max-height 0.4s ease; max-height: 2000px; }
 .earlier-cohorts-body.collapsed { max-height: 0; }
 
