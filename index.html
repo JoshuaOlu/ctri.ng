@@ -112,13 +112,14 @@ layout: base
   <div class="inner">
     <span class="section-eyebrow">The Team</span>
     <h2 class="section-h2">Built by young Nigerians.</h2>
-    <p class="section-body">CTRI is developed by CFK Fellows — university students and graduates who know what it felt like not to have a good textbook.</p>
+    <p class="section-body">CTRI is developed by CFK Fellows and volunteers — university students and graduates who understand what Nigerian secondary school students need, and are close enough to that experience to write for them effectively.</p>
     <div class="person-cards-grid" style="margin-top:2.5rem;">
       {% for member in site.data.team %}
         {% include person-card.html person=member role_label=member.role %}
       {% endfor %}
     </div>
-    <p style="margin-top:2rem;"><a href="/team/" style="font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);border-bottom:1px solid var(--red);padding-bottom:2px;">Meet the full team →</a></p>
+    <p style="margin-top:1rem;font-size:.8rem;color:var(--text-muted);">Showing leadership team only.</p>
+    <p style="margin-top:.75rem;"><a href="/contributors/" style="font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);border-bottom:1px solid var(--red);padding-bottom:2px;">View full list of contributors →</a></p>
   </div>
 </section>
 
