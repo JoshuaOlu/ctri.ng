@@ -52,7 +52,7 @@
   subject: "Mathematics"
   status: "open"
   commitment: "3–5 hours per week"
-  description: "Mathematics Typesetters turn handwritten solutions into clean, professionally typeset documents ready for the open textbook. This role suits someone meticulous, patient, and comfortable learning technical tools. We use LaTeX for typesetting and TikZ for mathematical figures — both will be taught during onboarding. A laptop is required."
+  description: "Mathematics Typesetters turn handwritten solutions into clean, professionally typeset documents ready for the open textbook. This role suits someone meticulous, patient, and comfortable learning technical tools. The role will require you to learn LaTeX if you're not already familiar with it. A laptop is required."
   what_you_will_do:
     - "Take scanned handwritten solutions and reproduce them as clean typeset documents"
     - "Typeset mathematical equations and step-by-step working accurately"
@@ -76,7 +76,7 @@
   subject: "Mathematics"
   status: "open"
   commitment: "3–5 hours per week"
-  description: "Mathematics Animators create short animated videos that bring worked problems and concepts to life for secondary school students. This role is for Python developers who think visually and want their coding skills to have direct educational impact. We use Manim, a Python library built for mathematical animation — it will be taught during onboarding. A laptop capable of rendering animations is required."
+  description: "Mathematics Animators create short animated videos that bring worked problems and concepts to life for secondary school students. This role is for Python developers who think visually and want their coding skills to have direct educational impact. The role requires learning to use Manim, a Python library for mathematical animation. We will guide you to resources for it during onboarding, but you should be comfortable with Python programming and have a laptop capable of rendering animations."
   what_you_will_do:
     - "Receive briefs describing which problems or concepts need to be animated"
     - "Write Python code using Manim to produce clear, accurate mathematical animations"
