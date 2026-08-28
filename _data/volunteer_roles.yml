@@ -12,14 +12,74 @@
 #   Can be a Google Form or any external link.
 # ═══════════════════════════════════════════════════════════════
 
-- title: "Problems & Solutions Writer"
+- title: "Curriculum Planner"
   subject: "Mathematics"
   status: "open"
   commitment: "3–5 hours per week"
-  description: "Help develop the Mathematics textbook by writing clear, step-by-step worked solutions to practice problems. You will take problem sets and produce clean, student-friendly solutions that guide learners through each concept. Strong Mathematics background required — you should be comfortable with the full SS1–SS3 curriculum."
+  description: "The Curriculum Planner decides what goes into the CTRI problem bank — which topics, at what difficulty level, and in what order — and communicates that clearly to the rest of the team. This role suits someone who knows the Nigerian SSS Mathematics curriculum well, thinks in sequences, and is organised enough to keep a production pipeline moving."
   what_you_will_do:
-    - "Write detailed, step-by-step solutions to assigned problem sets"
-    - "Ensure solutions are clear, accurate, and written in CTRI's conversational style"
-    - "Work closely with the Mathematics Writing Lead to align with textbook structure"
-    - "Revise solutions based on reviewer feedback"
-  apply_url: ""   # Add the application form URL here when ready
+    - "Review the problem bank regularly and identify gaps in topic and difficulty coverage"
+    - "Specify what new problems are needed and log them in the Problem Request Sheet"
+    - "Brief the Problem Designer when custom problems are required"
+    - "Monitor the production pipeline and flag bottlenecks to the team coordinator"
+  apply_url: "https://docs.google.com/forms/d/e/1FAIpQLScEIjYTlflBBHWPFX5xWkWipQ7GggsJICRUn_8t-FquK2N2jA/viewform"
+
+- title: "Problem Designer"
+  subject: "Mathematics"
+  status: "open"
+  commitment: "3–5 hours per week"
+  description: "Problem Designers write original mathematics problems for the CTRI problem bank. This is a creative and technical role that suits someone who is strong at SSS Mathematics, writes with precision, and enjoys thinking about what makes a problem interesting, fair, and well-pitched. We will show you exactly how we want problems formatted and logged."
+  what_you_will_do:
+    - "Write original mathematics problems based on topic and difficulty specifications"
+    - "Ensure each problem is clear, unambiguous, and has a unique correct answer"
+    - "Apply real-world or contextual framing where it adds value"
+    - "Log completed problems in the Problem Request Sheet for handoff to Problem Solvers"
+  apply_url: "https://docs.google.com/forms/d/e/1FAIpQLScEIjYTlflBBHWPFX5xWkWipQ7GggsJICRUn_8t-FquK2N2jA/viewform"
+
+- title: "Problem Solver"
+  subject: "Mathematics"
+  status: "open"
+  commitment: "3–5 hours per week"
+  description: "Problem Solvers work through assigned mathematics problems by hand and submit complete, step-by-step solutions for typesetting. This role is the engine of the CTRI problem bank. It suits someone who is strong across the SSS Mathematics curriculum, thorough in showing their working, and writes legibly. All you need is a smartphone to scan your work — we handle the rest."
+  what_you_will_do:
+    - "Pick up assigned problems each week and work through them step by step on paper"
+    - "Show all working clearly — no skipped steps"
+    - "Scan completed solutions and upload them to the correct Google Drive folder"
+    - "Update the Problem Request Sheet to show your work is ready for the next stage"
+  apply_url: "https://docs.google.com/forms/d/e/1FAIpQLScEIjYTlflBBHWPFX5xWkWipQ7GggsJICRUn_8t-FquK2N2jA/viewform"
+
+- title: "Mathematics Typesetter"
+  subject: "Mathematics"
+  status: "open"
+  commitment: "3–5 hours per week"
+  description: "Mathematics Typesetters turn handwritten solutions into clean, professionally typeset documents ready for the open textbook. This role suits someone meticulous, patient, and comfortable learning technical tools. We use LaTeX for typesetting and TikZ for mathematical figures — both will be taught during onboarding. A laptop is required."
+  what_you_will_do:
+    - "Take scanned handwritten solutions and reproduce them as clean typeset documents"
+    - "Typeset mathematical equations and step-by-step working accurately"
+    - "Draw geometric figures, graphs, and diagrams using TikZ"
+    - "Follow CTRI formatting standards and submit files for review"
+  apply_url: "https://docs.google.com/forms/d/e/1FAIpQLScEIjYTlflBBHWPFX5xWkWipQ7GggsJICRUn_8t-FquK2N2jA/viewform"
+
+- title: "Integration Writer"
+  subject: "Mathematics"
+  status: "open"
+  commitment: "3–5 hours per week"
+  description: "Integration Writers assemble textbook sections from the CTRI problem bank — selecting problems, writing the explanations and transitions that connect them, and making sure the whole section reads clearly for a secondary school student. This role suits someone with strong written English, solid SSS Mathematics understanding, and a natural instinct for how ideas should be introduced and built up."
+  what_you_will_do:
+    - "Select relevant problems from the problem bank for assigned topics"
+    - "Write clear introductions and explanations to accompany worked examples"
+    - "Sequence problems and examples in an order that builds understanding progressively"
+    - "Submit draft sections for editorial review and revise based on feedback"
+  apply_url: "https://docs.google.com/forms/d/e/1FAIpQLScEIjYTlflBBHWPFX5xWkWipQ7GggsJICRUn_8t-FquK2N2jA/viewform"
+
+- title: "Mathematics Animator"
+  subject: "Mathematics"
+  status: "open"
+  commitment: "3–5 hours per week"
+  description: "Mathematics Animators create short animated videos that bring worked problems and concepts to life for secondary school students. This role is for Python developers who think visually and want their coding skills to have direct educational impact. We use Manim, a Python library built for mathematical animation — it will be taught during onboarding. A laptop capable of rendering animations is required."
+  what_you_will_do:
+    - "Receive briefs describing which problems or concepts need to be animated"
+    - "Write Python code using Manim to produce clear, accurate mathematical animations"
+    - "Follow CTRI animation style conventions for consistency across the learning hub"
+    - "Submit animations for review before publication"
+  apply_url: "https://docs.google.com/forms/d/e/1FAIpQLScEIjYTlflBBHWPFX5xWkWipQ7GggsJICRUn_8t-FquK2N2jA/viewform"
