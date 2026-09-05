@@ -12,19 +12,20 @@
 #   Can be a Google Form or any external link.
 # ═══════════════════════════════════════════════════════════════
 
-- title: "Curriculum Planner"
+- title: "Mathematics Curriculum Planner"
   subject: "Mathematics"
-  status: "paused"
+  status: "open"
   commitment: "3–5 hours per week"
-  description: "The Curriculum Planner decides what goes into the CTRI problem bank — which topics, at what difficulty level, and in what order — and communicates that clearly to the rest of the team. This role suits someone who knows the Nigerian SSS Mathematics curriculum well, thinks in sequences, and is organised enough to keep a production pipeline moving."
+  description: "The Curriculum Planning team decides what goes into the CTRI Mathematics learning resources and problem bank — which topics, at what difficulty level, and in what order — and communicates that clearly to the rest of the team. This role suits someone who knows the Nigerian SSS Mathematics curriculum well, thinks in sequences, and is organised enough to keep a production pipeline moving."
   what_you_will_do:
+    - "Plan how concepts and topics should be sequenced across CTRI Mathematics resources"
     - "Review the problem bank regularly and identify gaps in topic and difficulty coverage"
     - "Specify what new problems are needed and log them in the Problem Request Sheet"
     - "Brief the Problem Designer when custom problems are required"
     - "Monitor the production pipeline and flag bottlenecks to the team coordinator"
   apply_url: "https://docs.google.com/forms/d/e/1FAIpQLScEIjYTlflBBHWPFX5xWkWipQ7GggsJICRUn_8t-FquK2N2jA/viewform"
 
-- title: "Problem Designer"
+- title: "Mathematics Problem Designer"
   subject: "Mathematics"
   status: "open"
   commitment: "3–5 hours per week"
@@ -36,7 +37,7 @@
     - "Log completed problems in the Problem Request Sheet for handoff to Problem Solvers"
   apply_url: "https://docs.google.com/forms/d/e/1FAIpQLScEIjYTlflBBHWPFX5xWkWipQ7GggsJICRUn_8t-FquK2N2jA/viewform"
 
-- title: "Problem Solver"
+- title: "Mathematics Problem Solver"
   subject: "Mathematics"
   status: "open"
   commitment: "3–5 hours per week"
@@ -50,7 +51,7 @@
 
 - title: "Mathematics Typesetter"
   subject: "Mathematics"
-  status: "paused"
+  status: "open"
   commitment: "3–5 hours per week"
   description: "Mathematics Typesetters turn handwritten solutions into clean, professionally typeset documents ready for the open textbook. This role suits someone meticulous, patient, and comfortable learning technical tools. The role will require you to learn LaTeX if you're not already familiar with it. A laptop is required."
   what_you_will_do:
