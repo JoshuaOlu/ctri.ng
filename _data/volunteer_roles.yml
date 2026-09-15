@@ -12,6 +12,21 @@
 #   Can be a Google Form or any external link.
 # ═══════════════════════════════════════════════════════════════
 
+- title: "Agriculture Content Contributor"
+  subject: "Agricultural Science"
+  status: "open"
+  commitment: "3–5 hours per week"
+  description: "Content Analysts are helping build the foundation of a WAEC-aligned Agriculture learning resource. Right now, the work is analytical: reviewing past WAEC Agriculture questions from 1988 to date to understand what the resource must cover, at what depth, and at what level of thinking. This role suits someone who knows their Agric, reads carefully, and can think critically about how questions are structured and what they demand of students."
+  what_you_will_do:
+    - "*Review and categorise WAEC Agriculture past questions by topic"
+    - "Analyse questions by cognitive level to map what the resource must address"
+    - "Contribute to discussions on textbook structure, depth, tone, and examples grounded in real WAEC patterns"
+    - "Draft first versions of explanations, solved examples, and practice questions aligned to the CTRI Agricultural Science syllabus"
+    - "Test content clarity by ensuring every concept is accessible to any SSS student"
+
+  apply_url: "https://docs.google.com/forms/d/e/1FAIpQLScEIjYTlflBBHWPFX5xWkWipQ7GggsJICRUn_8t-FquK2N2jA/viewform"
+
+
 - title: "Mathematics Curriculum Planner"
   subject: "Mathematics"
   status: "open"
